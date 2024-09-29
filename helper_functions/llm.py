@@ -9,7 +9,7 @@ if load_dotenv('.env'):
 # for local development
     OpenAI_KEY=os.getenv('OPENAI_API_KEY')
 else:
-    cOpenAI_KEY=st.secrets('OPENAI_API_KEY')
+    OpenAI_KEY=st.secrets('OPENAI_API_KEY')
 
 # Pass the API Key to the OpenAI Client
 client = OpenAI(api_key=OpenAI_KEY)
