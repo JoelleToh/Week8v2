@@ -7,12 +7,12 @@ import tiktoken
 
 if load_dotenv('.env'):
 # for local development
-    OpenAI_KEY=os.getenv('OPENAI_API_KEY')
+    OPENAI_KEY=os.getenv('OPENAI_API_KEY')
 else:
-    OpenAI_KEY=st.secrets('OPENAI_API_KEY')
+    OPENAI_KEY=st.secrets('OPENAI_API_KEY')
 
 # Pass the API Key to the OpenAI Client
-client = OpenAI(api_key=OpenAI_KEY)
+client = OpenAI(api_key=OPENAI_KEY)
 
 
 def get_embedding(input, model='text-embedding-3-small'):
